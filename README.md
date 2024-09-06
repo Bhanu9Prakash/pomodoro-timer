@@ -2,6 +2,12 @@
 
 FocusPom Premium is a Pomodoro Technique-based timer application designed to help users stay productive by managing work and break intervals. It also tracks weekly progress and tasks, and offers dark mode for a better user experience.
 
+https://bhanu9prakash.github.io/pomodoro-timer/
+
+![image](https://github.com/user-attachments/assets/7a24d3c1-a5f4-47a6-901a-311ebe6a4555)
+
+
+
 ## Features
 
 - **Pomodoro Timer**: Start, pause, and reset a timer for work sessions (default: 25 minutes) and break sessions (default: 5 minutes).
