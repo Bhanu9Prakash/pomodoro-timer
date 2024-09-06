@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusPom Premium</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>FocusPom Premium</h1>
+            <button id="darkModeToggle" class="btn"><i class="fas fa-moon"></i></button>
+        </header>
+        <div class="main-content">
+            <div class="timer-section">
+                <div class="timer-container">
+                    <svg class="timer-svg" viewBox="0 0 100 100">
+                        <circle class="timer-background" cx="50" cy="50" r="45"></circle>
+                        <circle class="timer-progress" cx="50" cy="50" r="45"></circle>
+                    </svg>
+                    <div class="timer-content">
+                        <div id="timer">25:00</div>
+                        <div class="timer-label">Focus Time</div>
+                    </div>
+                </div>
+                <div class="controls">
+                    <button id="startBtn" class="btn"><i class="fas fa-play"></i></button>
+                    <button id="pauseBtn" class="btn"><i class="fas fa-pause"></i></button>
+                    <button id="resetBtn" class="btn"><i class="fas fa-redo"></i></button>
+                    <button id="settingsBtn" class="btn"><i class="fas fa-cog"></i></button>
+                </div>
+            </div>
+            <div class="stats-section">
+                <h2>Weekly Focus Time</h2>
+                <canvas id="weeklyChart"></canvas>
+            </div>
+        </div>
+        <div class="task-section">
+            <h2>Current Tasks</h2>
+            <div class="task-input">
+                <input type="text" id="taskInput" placeholder="What are you working on?">
+                <button id="addTaskBtn" class="btn"><i class="fas fa-plus"></i></button>
+            </div>
+            <ul id="taskList" class="task-list"></ul>
+        </div>
+        <div id="sessionHistory" class="session-history">
+            <h2>Session History</h2>
+            <ul id="historyList"></ul>
+        </div>
+    </div>
+    <div id="settingsModal" class="modal">
+        <div class="modal-content">
+            <h2>Settings</h2>
+            <label for="workDuration">Work Duration (minutes):</label>
+            <input type="number" id="workDuration" min="1" max="60" value="25">
+            <label for="breakDuration">Break Duration (minutes):</label>
+            <input type="number" id="breakDuration" min="1" max="30" value="5">
+            <button id="saveSettings" class="btn">Save</button>
+        </div>
+    </div>
+    <div id="alert" class="alert">
+        <h3>Time's up!</h3>
+        <p>Great job! You've completed a focus session. Take a short break before starting your next task.</p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
